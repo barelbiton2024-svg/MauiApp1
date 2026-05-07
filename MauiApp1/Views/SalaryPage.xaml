@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.SalaryPage"
+             Title="SalaryPage">
+    <VerticalStackLayout>
+        <Label 
+Text=" Salary"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+        <Entry Keyboard= "Telephone" Placeholder="yoyr salary is " />
+        <Button Clicked="Button_Clicked" Text="Save"/>
+    </VerticalStackLayout>
+</ContentPage>

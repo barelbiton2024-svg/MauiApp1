@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.HomePage"
+             Title="HomePage">
+    <VerticalStackLayout>
+        <Button Clicked="Button_Clicked" Text="Profile"/>
+        <Button Clicked="Button_Clicked" Text="Bank Account"/>
+        <Button Clicked="Button_Clicked" Text="Job For You"/>
+        <Button Clicked="Button_Clicked" Text="Your Job"/>
+        <Button Clicked="Button_Clicked" Text="Past Jobs"/>
+    </VerticalStackLayout>
+</ContentPage>

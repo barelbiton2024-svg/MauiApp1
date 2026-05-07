@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiApp1.ViewModel"
+               x:DataType="vm:WorksVM"
+             x:Class="MauiApp1.Views.JobForUPage"
+             Title="JobForUPage">
+    <VerticalStackLayout>
+        <Label 
+Text="LocationW"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+        <Entry  Text="{Binding Locationw}" Placeholder="Enter Location " />
+
+        <Label 
+        Text="Time"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+        <Entry  Text="{Binding Time1}" Placeholder="Enter Time " />
+
+
+        <Label 
+Text="Money Per Hour"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+        <Entry Keyboard= "Numeric" Text="{Binding Moneyperhour}" Placeholder="Enter Money Per Hour" />
+
+        <Label 
+Text="Job Type"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+        <Entry Text="{Binding Jobtype}" Placeholder="Enter Job Type " />
+
+        <Label 
+Text="job for"
+            
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+        <Picker x:Name="myGender" Title="Select an option">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>female</x:String>
+                    <x:String>male</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button Command="{Binding SaveWorksCommand}" Text="Save"/>
+    </VerticalStackLayout>
+</ContentPage>
