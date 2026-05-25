@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace MauiApp1.ViewModel
 {
+    //דף הוספת עבודה JobForU
     public partial class WorksVM : ObservableObject
     {
         private readonly FirebaseClient _client;
@@ -39,15 +40,24 @@ namespace MauiApp1.ViewModel
         [RelayCommand]
         public async Task SaveWorks()
         {
-            await _client.Child("Works").PostAsync(new Works
+            try
             {
-                LocationW = _locationw,
-                Time1 = _time1,
-                MoneyPerHour = _moneyperhour,
-                JobType = _jobtype,
-             //   Gender = _gender,   
+                await _client.Child("Works").PostAsync(new Works
+                {
+                    LocationW = _locationw,
+                    Time1 = _time1,
+                    MoneyPerHour = _moneyperhour,
+                    JobType = _jobtype,
+                    //   Gender = _gender,   
 
-            });
+                });
+            }
+            catch (Exception)
+            {
+
+                _ = Shell.Current.DisplayAlert("Work", $"Add Work fail", "ok"); 
+            }
+
         }
     }
 }

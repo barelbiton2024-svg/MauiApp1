@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.LogoPage"
              Title="LogoPage">
-    <Grid ColumnDefinitions="*" RowDefinitions="*" BackgroundColor="Black"> 
-        <Image Source="logo.jpg"  Aspect="AspectFit" Grid.Column="0" Grid.Row="0" />
+    <Grid ColumnDefinitions="*,3*,*" RowDefinitions="*,3*,*" BackgroundColor="Black"> 
+        <!--<Image Source="logo.png" Aspect="AspectFit" Grid.Column="1" Grid.Row="1" />-->
+        <ImageButton Source="logo.png" CornerRadius="300" Aspect="AspectFit" Grid.Column="1" Grid.Row="1"/>
     </Grid>
 </ContentPage>

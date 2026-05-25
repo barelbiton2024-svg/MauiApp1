@@ -1,14 +1,12 @@
+using MauiApp1.ViewModel;
+
 namespace MauiApp1.Views;
 
 public partial class SavedWorkPage : ContentPage
 {
-	public SavedWorkPage()
+	public SavedWorkPage(WorkPerUserVM vm)
 	{
 		InitializeComponent();
+		BindingContext = vm;
 	}
-    private void Button_Clicked(object sender, EventArgs e)
-    {
-        Button btn = sender as Button;
-
-    }
 }

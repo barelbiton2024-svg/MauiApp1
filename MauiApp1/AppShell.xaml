@@ -44,6 +44,12 @@ Title="Users list"
 ContentTemplate="{DataTemplate views:AppUserList}"
 Route="AppUserList" />
         </Tab>
+        <Tab Title="Work Per User">
+            <ShellContent
+Title="WorkPerUser"
+ContentTemplate="{DataTemplate views:SavedWorkPage}"
+Route="WorkPerUser" />
+        </Tab>
     </FlyoutItem>
 
 </Shell>

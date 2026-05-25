@@ -27,8 +27,24 @@ namespace MauiApp1.ViewModel
         [RelayCommand]
         public async Task Login()
         {
-            await _client.SignInWithEmailAndPasswordAsync(Email, Password);
-            _ = Shell.Current.DisplayAlert("Login", $"Login succeed", "ok");
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await Shell.Current.DisplayAlert("sorry", "no internet", "ok");
+                return;
+            }
+            try
+            {
+                await _client.SignInWithEmailAndPasswordAsync(Email, Password);
+                _ = Shell.Current.DisplayAlert("Login", $"Login succeed", "ok");
+                /*await Shell.Current.GoToAsync(nameof(WorkPerUserVM))*/;
+
+            }
+            catch (Exception)
+            {
+
+                 _ = Shell.Current.DisplayAlert("Login", $"Login fail", "ok"); ;
+
+            }
         }
     }
 }

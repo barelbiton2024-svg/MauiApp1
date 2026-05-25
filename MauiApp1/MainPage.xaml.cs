@@ -45,10 +45,10 @@ namespace MauiApp1
                     p = new PastWorkPage();
                     await App.Current.MainPage.Navigation.PushAsync(p);
                     break;
-                case "SavedWorkPage":
-                    p = new SavedWorkPage();
-                    await App.Current.MainPage.Navigation.PushAsync(p);
-                    break;
+                //case "SavedWorkPage":
+                //    p = new SavedWorkPage();
+                //    await App.Current.MainPage.Navigation.PushAsync(p);
+                //    break;
                 //case "JobForUPage":
                 //    p = new JobForUPage();
                 //    await App.Current.MainPage.Navigation.PushAsync(p);

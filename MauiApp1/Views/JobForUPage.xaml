@@ -41,6 +41,7 @@ HorizontalOptions="Center" />
                 <x:Array Type="{x:Type x:String}">
                     <x:String>female</x:String>
                     <x:String>male</x:String>
+                    <x:String>both</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>

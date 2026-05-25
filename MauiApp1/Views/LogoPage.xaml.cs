@@ -14,6 +14,6 @@ public partial class LogoPage : ContentPage
     }
     public void Continue()
 	{
-        App.Current.MainPage = new NavigationPage(new MainPage());
+        App.Current.MainPage = new AppShell();
 	}
 }

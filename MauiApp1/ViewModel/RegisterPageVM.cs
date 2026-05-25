@@ -40,24 +40,30 @@ namespace MauiApp1.ViewModel
         [RelayCommand]
         public async Task SaveRegister()
         {
+            try
+            {
+                await _client.Child("RegisterUser").PostAsync(new AppUser
+                {
+                    //  Id = _auth.User.Uid,
+                    Name = _name,
+                    Email = _email,
+                    UserName = _userName,
+                    Password = _password,
+                    BornYear = _bornYear,
+
+                });
+            }
+            catch (Exception)
+            {
+
+                _= Shell.Current.DisplayAlert("Register", $"Register fail", "ok"); ; ;
+            }
             //if (connectivity.NetworkAccess != NetworkAccess.Internet)
             //{
             //    await Shell.Current.DisplayAlert("sorry", "no internet", "ok");
             //    return;
             //}
-            await _auth.CreateUserWithEmailAndPasswordAsync(Email, Password);
-
-            await _client.Child("RegisterUser").PostAsync(new AppUser
-            {
-                Id = _auth.User.Uid,
-                Name = _name,
-                Email = _email,
-                UserName = _userName,
-                Password = _password,
-                BornYear = _bornYear,
-
-            });
-
+            //await _auth.CreateUserWithEmailAndPasswordAsync(Email, Password);
             }
         }
     }
